@@ -30,6 +30,7 @@
 .logo-img {
     width: 64px;
     height: 56px;
+    fill: #fbfaf8;
 }
 .logo-txt {
     font-family: Raleway;
@@ -39,10 +40,20 @@
     letter-spacing: -0.04em;
     color: #ffffff;
 }
+.logo-img:hover,
+.logo-txt:hover {
+    fill:#c7b299;
+    color: #c7b299;
+}
+.logo-img:active,
+.logo-txt:active {
+    fill: #736357;
+    color: #736357; 
+}
 .menu {
     margin: 20px 0 0 219px;
-    padding: 0 375px 0 0;
-    width: 770px;
+    width: 1070px;
+    height: 20px;
     display: flex;
 }
 .menu-list {
@@ -61,11 +72,10 @@
     color: #ffffff;
 }
 .menu-link:hover {
-    font-family: Montserrat;
-    font-size: 14px;
-    line-height: 1.2;
-    font-weight: 300;
     color: #c7b299;
+}
+.menu-link:active {
+    color: #736357; 
 }
 .menu-link-active {
     font-family: Montserrat;
@@ -76,15 +86,40 @@
 }
 .cart {
     margin: -5px 0 0 63px;
-    width: 18px;
-    height: 24px;
-    background-image: url(../img/cart_icon.svg);
+    padding: 0;
+    width: 20px;
+    height: 26px;
+    background-color: transparent;
+    outline: none;
+    border-width: 0px;
+    fill: #fbfaf8;
+}
+.cart:hover {
+    fill: #c7b299;
+    cursor: pointer;
+}
+.cart:active {
+   fill: #736357; 
+   cursor: pointer;
+}
+.form-search {
+    margin-top: -4px;
 }
 .search {
-    margin: -5px 0 0 28px;
+    margin: 0 0 0 28px;
+    padding: 0;
     width: 24px;
     height: 24px;
+    border-width: 0px;
     background-image: url(../img/search.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    outline: none;
+}
+.search:focus {
+  width: 200px;
+  transition: width 1s ease-out;
+  background-position: right;
 }
 .slider {
     width: 100%;
@@ -95,10 +130,16 @@
     align-items: center;
 }
 .arrow-left {
-    background-image: url(../img/arrow_left.svg);
     width: 40px;
     height: 73px;
     opacity: 0.5;
+    fill: #fbfaf8;
+}
+.arrow-left:hover {
+    fill: #d3c1ad;
+}
+.arrow-left:active {
+    fill: #736357;
 }
 .slider-midium {
     text-align: center;
@@ -107,7 +148,6 @@
     display: block;
     font-family: Raleway;
     font-size: 36px;
-    line-height: 1.2;
     font-weight: 500;
     color: #ffffff;
     margin: 0 0 15px 0;
@@ -130,10 +170,16 @@
     margin: 0 0 51px 0;
 }
 .arrow-right {
-    background-image: url(../img/arrow_right.svg);
     width: 40px;
     height: 73px;
     opacity: 0.5; 
+    fill: #fbfaf8;
+}
+.arrow-right:hover {
+    fill: #d3c1ad;
+}
+.arrow-right:active {
+    fill: #736357;
 }
 .slider-button {
     width: 170px;
@@ -208,8 +254,7 @@
     display: block;
     width: 49px;
     height: 49px;
-    background-image: url(../img/icon_web_pencil.svg);
-    background-repeat: no-repeat;
+    fill: #555555;
     margin: 0 auto 30px auto;
 }
 .servies-heading {
@@ -230,24 +275,49 @@
     color: #8c8c8c;
     text-align: center;   
 }
+.web:hover .icon-web {
+   fill: #c7b299; 
+}
+.web:hover .servies-heading {
+    color: #c7b299;
+}
+.web:hover:after {
+    background-color: #c7b299;
+}
 .icon-development {
     display: block;
     width: 44px;
-    height: 40px;  
-    background-image: url(../img/icon_development.svg); 
-    background-repeat: no-repeat;
+    height: 40px; 
+    fill: #c7b299;
     margin: 8px auto 30px auto;
 }
 .heading-active {
     color: #c7b299;
 }
+.development:hover .icon-development {
+    fill: #c7b299;
+}
+.development:hover .servies-heading {
+    color: #c7b299;
+}
+.development:hover:after {
+    background-color: #c7b299;
+}
 .icon-customization {
     display: block;
     width: 44px;
-    height: 44px;  
-    background-image: url(../img/icon_customization.svg); 
-    background-repeat: no-repeat;
+    height: 44px;
+    fill: #555555;
     margin: 4px auto 30px auto;
+}
+.customization:hover .icon-customization {
+    fill: #c7b299;
+}
+.customization:hover .servies-heading {
+    color: #c7b299;
+}
+.customization:hover:after {
+    background-color: #c7b299;
 }
 .icon-marketing {
     display: block;
@@ -256,6 +326,15 @@
     background-image: url(../img/icon_marketing.svg); 
     background-repeat: no-repeat;
     margin: 11px auto 30px auto;
+}
+.marketing:hover .icon-marketing {
+    fill: #c7b299;
+}
+.marketing:hover .servies-heading {
+    color: #c7b299;
+}
+.marketing:hover:after {
+    background-color: #c7b299;
 }
 .realization-idea {
     height: 700px;
@@ -285,6 +364,5 @@
     line-height: 28px;
     font-weight: 300;
     color: #8c8c8c;
-    text-align: center;
-    
+    text-align: center;    
 }
