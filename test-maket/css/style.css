@@ -1,3 +1,33 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/montserrat/light/montserrat-light.eot');
+    src: url('../fonts/montserrat/light/montserrat-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/light/montserrat-light.woff2') format('woff2'),
+         url('../fonts/montserrat/light/montserrat-light.woff') format('woff'),
+         url('../fonts/montserrat/light/montserrat-light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: raleway;
+    src: url(../fonts/raleway/raleway-regular.ttf);
+    font-weight: 400;   
+}
+@font-face {
+    font-family: raleway;
+    src: url(../fonts/raleway/raleway-medium.ttf);
+    font-weight: 500; 
+}
+@font-face {
+    font-family: raleway;
+    src: url(../fonts/raleway/raleway-semiBold.ttf);
+    font-weight: 600; 
+}
+@font-face {
+    font-family: raleway;
+    src: url(../fonts/raleway/raleway-extraBold.ttf);
+    font-weight: 800; 
+}
 .container {
     width: 1920px;
     margin: 0 auto;
@@ -65,7 +95,7 @@
 }
 .menu-link {
     text-decoration: none;
-    font-family: Montserrat;
+    font-family: Montserrat, arial, sans-serif;
     font-size: 14px;
     line-height: 1.2;
     font-weight: 300;
@@ -78,7 +108,7 @@
     color: #736357; 
 }
 .menu-link-active {
-    font-family: Montserrat;
+    font-family: Montserrat, arial, sans-serif;
     font-size: 14px;
     line-height: 1.2;
     font-weight: 300;
@@ -163,7 +193,7 @@
 .text3 {
     width: 562px;
     display: block;
-    font-family: Montserrat;
+    font-family: Montserrat, arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
     color: #ffffff;
@@ -196,10 +226,13 @@
     padding: 0;
     border-width: 0;
 }
-.slider-button:hover,
-.slider-button:active {
+.slider-button:hover {
     background-color: #736357;
-    color: #998675;
+    cursor: pointer;
+}
+.slider-button:active {
+    background-color: #30241e;
+    cursor: pointer;
 }
 .pagination {
     position: absolute;
@@ -208,20 +241,29 @@
     bottom: 40px;
 }
 .circle {
-    width: 11px;
-    height: 11px;
+    width: 9px;
+    height: 9px;
     display: inline-block;
     border-radius: 50%;
     margin: 5px;
     opacity: 0.5;
     background-color: #ffffff;
+    border: 2px solid transparent;
 }
-.circle-active {
-    width: 15px;
-    height: 15px;
+.circle:hover {
     border: 2.0px solid #d3c1ad;
     background-color: transparent;
-    margin-bottom: 0;
+    transform: scale(1.2);
+}
+.circle-active {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 5px 5px 3px 5px;
+    opacity: 0.5;
+    border: 2.0px solid #d3c1ad;
+    background-color: transparent;
 }
 .servies {
     margin: 0;
@@ -268,7 +310,7 @@
 }
 .servies-txt {
     margin: 0 0 30px 0;
-    font-family: Montserrat;
+    font-family: Montserrat, arial, sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: 300;
@@ -276,13 +318,16 @@
     text-align: center;   
 }
 .web:hover .icon-web {
-   fill: #c7b299; 
+    fill: #c7b299; 
+    cursor: pointer;
 }
 .web:hover .servies-heading {
     color: #c7b299;
+    cursor: pointer;
 }
 .web:hover:after {
     background-color: #c7b299;
+    cursor: pointer;
 }
 .icon-development {
     display: block;
@@ -296,12 +341,15 @@
 }
 .development:hover .icon-development {
     fill: #c7b299;
+    cursor: pointer;
 }
 .development:hover .servies-heading {
     color: #c7b299;
+    cursor: pointer;
 }
 .development:hover:after {
     background-color: #c7b299;
+    cursor: pointer;
 }
 .icon-customization {
     display: block;
@@ -312,12 +360,15 @@
 }
 .customization:hover .icon-customization {
     fill: #c7b299;
+    cursor: pointer;
 }
 .customization:hover .servies-heading {
     color: #c7b299;
+    cursor: pointer;
 }
 .customization:hover:after {
     background-color: #c7b299;
+    cursor: pointer;
 }
 .icon-marketing {
     display: block;
@@ -329,12 +380,15 @@
 }
 .marketing:hover .icon-marketing {
     fill: #c7b299;
+    cursor: pointer;
 }
 .marketing:hover .servies-heading {
     color: #c7b299;
+    cursor: pointer;
 }
 .marketing:hover:after {
     background-color: #c7b299;
+    cursor: pointer;
 }
 .realization-idea {
     height: 700px;
@@ -359,10 +413,60 @@
 .idea-txt {
     margin: 0 auto;
     width: 757px;
-    font-family: Montserrat;
+    font-family: Montserrat, arial, sans-serif;
     font-size: 16px;
     line-height: 28px;
     font-weight: 300;
     color: #8c8c8c;
     text-align: center;    
+}
+.aside {
+    padding: 48px 375px 48px 375px;
+    box-sizing: border-box;
+    background-image: url(../img/background_aside.jpg); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.aside-heading {
+    margin: 0 0 5px 0;
+    font-family: Raleway;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #ffffff;
+}
+.aside-heading span {
+    color: #c7b299;
+}
+.aside-txt {
+    margin: 0;
+    font-family: Montserrat, arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #615855;
+}
+.aside-button {
+    width: 170px;
+    height: 50px;
+    background-color: #998675;
+    border-radius: 3.0px;
+    outline: 0;
+    font-family: Raleway;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff; 
+    padding: 0;
+    border-width: 0;
+}
+.aside-button:hover {
+    background-color: #736357;
+    cursor: pointer;
+}
+.aside-button:active {
+    background-color: #30241e;
+    cursor: pointer;
 }
